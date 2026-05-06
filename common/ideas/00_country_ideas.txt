@@ -1959,7 +1959,7 @@ HAB_ideas = {
 
 CHI_ideas = {
 	start = {
-		fort_maintenance_modifier = -0.2
+		fort_maintenance_modifier = -0.15
 		idea_cost = -0.10
 	}
 	
