@@ -1,0 +1,11 @@
+1444.1.1 = {
+	add_attacker = MAL
+	add_defender = POR
+	add_defender = JOL
+}
+
+1444.9.1 = {
+	rem_attacker = MAL
+	rem_defender = POR
+	rem_defender = JOL
+}

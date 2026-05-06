@@ -1,0 +1,40 @@
+war_goal = {
+	type = superiority_crusade
+	casus_belli = cb_crusade
+}
+
+1443.1.1 = {
+	add_attacker = GRA
+	add_defender = TUN
+
+
+}
+
+
+
+
+1444.11.10 = {
+	battle = {
+		name = "Varna"
+		location = 150
+		attacker = {
+			commander = "Wladyslaw III"	# Wladyslaw III
+			infantry = 18000
+			cavalry = 2000
+			losses = 60	# percent
+			country = POL
+		}
+		defender = {
+			commander = "Murad II"	# Murad II
+			infantry = 50000
+			cavalry = 10000
+			losses = 25	# percent
+			country = TUR
+		}
+		result = no
+	}
+	1444.11.11 = {
+	rem_attacker = GRA
+	rem_defender = TUN
+	}
+}

@@ -1,0 +1,57 @@
+name = "Crusade of Varna13"
+war_goal = {
+	type = superiority_crusade
+	casus_belli = cb_crusade
+}
+1444.11.01 = {
+	add_attacker = GEN
+	add_defender = NAP
+	add_defender = VEN
+	add_defender = TUN
+}
+
+1444.11.01 = {
+	rem_attacker = GEN
+	rem_defender = NAP
+	rem_defender = VEN
+	rem_defender = TUN
+}
+1444.11.10 = {
+	add_attacker = NAP
+	add_defender = GEN
+	add_defender = VEN
+	add_defender = TUN
+}
+
+1444.11.10 = {
+	rem_attacker = NAP
+	rem_defender = GEN
+	rem_defender = VEN
+	rem_defender = TUN
+}
+1444.11.10 = {
+	add_attacker = VEN
+	add_defender = NAP
+	add_defender = GEN
+	add_defender = TUN
+}
+
+1444.11.10 = {
+	rem_attacker = VEN
+	rem_defender = NAP
+	rem_defender = GEN
+	rem_defender = TUN
+}
+1444.11.10 = {
+	add_attacker = TUN
+	add_defender = NAP
+	add_defender = VEN
+	add_defender = GEN
+}
+
+1444.11.10 = {
+	rem_attacker = TUN
+	rem_defender = NAP
+	rem_defender = VEN
+	rem_defender = GEN
+}

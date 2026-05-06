@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = portuguese_empire_reform
+primary_culture = portugese
+religion = catholic
+technology_group = western
+historical_friend = SPA
+historical_friend = CAS
+capital = 227 # Lisboa

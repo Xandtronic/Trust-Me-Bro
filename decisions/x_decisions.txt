@@ -1,0 +1,133 @@
+country_decisions = {
+	
+	
+	where_are_the_pokemon = {
+		color = { 41  233  249 }
+		potential = {
+			ai = no
+			NOT = { has_country_flag = hide_extra_decisions }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 219
+				province_id = 343
+				province_id = 151
+				province_id = 183
+				province_id = 134
+				province_id = 361
+				province_id = 236
+				province_id = 50
+				province_id = 295
+				province_id = 153
+				province_id = 112
+				province_id = 101
+				province_id = 257
+				province_id = 45
+				province_id = 70
+				province_id = 97
+				province_id = 1020
+				province_id = 1816
+				province_id = 1821
+				province_id = 4678
+				province_id = 600
+				province_id = 636
+				province_id = 667
+				province_id = 341
+				province_id = 1
+
+				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+		}
+		effect = {
+			
+		}
+	}
+	delete_world = {
+		color = { 0 0 0 }
+		potential = {
+			ai = no
+			NOT = { has_global_flag = cleared_east	}
+		}
+		effect = {
+			east_indies_superregion = {destroy_province_permanently = yes }
+			oceania_superregion = {destroy_province_permanently = yes }
+			china_superregion = {destroy_province_permanently = yes }
+			far_east_superregion = {destroy_province_permanently = yes }
+			india_superregion = {destroy_province_permanently = yes }
+			southern_africa_superregion = {destroy_province_permanently = yes }
+			tartary_superregion = {destroy_province_permanently = yes }
+			mongolia_region = {destroy_province_permanently = yes }
+			east_siberia_region = {destroy_province_permanently = yes }
+			tibet_region = {destroy_province_permanently = yes }
+			persia_superregion = {destroy_province_permanently = yes }
+			causcasia_region = {destroy_province_permanently = yes }
+			sahel_region = {destroy_province_permanently = yes }
+			niger_region = {destroy_province_permanently = yes }
+			guinea_region = {destroy_province_permanently = yes }
+			horn_of_africa_region = {destroy_province_permanently = yes }
+			ural_area = {destroy_province_permanently = yes }
+			pirate_coast_area = {destroy_province_permanently = yes }
+			mascat_area = {destroy_province_permanently = yes }
+			oman_area = {destroy_province_permanently = yes }
+			dhofar_area = {destroy_province_permanently = yes }
+			mahra_area = {destroy_province_permanently = yes }
+			bahrain_area = {destroy_province_permanently = yes }
+			yamamah_area = {destroy_province_permanently = yes }
+			asir_area = {destroy_province_permanently = yes }
+			yemen_area = {destroy_province_permanently = yes }
+			upper_yemen_area = {destroy_province_permanently = yes }
+			tihama_al_yemen_area = {destroy_province_permanently = yes }
+			basra_area = {destroy_province_permanently = yes }
+			iraq_arabi_area = {destroy_province_permanently = yes }
+			set_global_flag = cleared_east
+		}
+	}
+	por_see_africa = {
+		color = { 41  233  249 }
+		potential = {
+			tag = POR
+			NOT = { has_country_flag = por_discovered	}
+		}
+		effect = {
+			west_african_coast_sea_area = {
+				discover_country = POR
+			}
+			jolof_area = {
+				discover_country = POR
+			}
+			futa_jallon_area = {
+				discover_country = POR
+			}
+			set_country_flag = por_discovered
+		}
+	}
+	desperate_defence = {
+		color = { 41  233  249 }
+		potential = {
+			defensive_ideas = 0
+		}
+		allow = {
+			defensive_ideas = 7
+			is_in_war = {
+			defender_leader = ROOT
+			}
+			NOT = {
+				has_country_flag = desperate_defence_used
+			}
+			
+		}
+		effect = {
+			add_country_modifier ={
+				name = desperate_defence_modifier
+				duration = 3650
+			}
+			set_country_flag = desperate_defence_used
+		}
+	}
+}

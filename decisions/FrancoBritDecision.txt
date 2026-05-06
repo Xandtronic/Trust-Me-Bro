@@ -1,0 +1,104 @@
+country_decisions = {
+	x_franco_union_nation = {
+		major = yes
+		potential = {
+			tag = FRA
+			is_free_or_tributary_trigger = yes
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = home_counties_area
+				area = wessex_area
+				area = east_midlands_area
+				area = east_anglia_area
+				area = west_midlands_area
+				area = wales_area
+				area = yorkshire_area
+				area = scottish_marches_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = XFR }
+			NOT = { exists = ENG }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			adm_tech = 10
+			home_counties_area = {
+				is_core = ROOT
+				owned_by = ROOT
+				type = all
+			}
+			wessex_area = {
+				is_core = ROOT
+				owned_by = ROOT
+				type = all
+			}
+			east_anglia_area = {
+				is_core = ROOT
+				owned_by = ROOT
+				type = all
+			}
+			west_midlands_area = {
+				is_core = ROOT
+				owned_by = ROOT
+				type = all
+			}
+			wales_area = {
+				is_core = ROOT
+				owned_by = ROOT
+				type = all
+			}
+			yorkshire_area = {
+				is_core = ROOT
+				owned_by = ROOT
+				type = all
+			}
+			scottish_marches_area = {
+				is_core = ROOT
+				owned_by = ROOT
+				type = all
+			}
+		}
+		effect = {
+			change_tag = XFR
+			on_change_tag_effect = yes
+			add_government_reform = dual_monarch_reform
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			british_isles_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = XFR
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = XFR_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,4 @@
+union = {
+	first = LBV
+	second = REG
+}

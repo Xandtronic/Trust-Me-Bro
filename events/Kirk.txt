@@ -1,0 +1,48 @@
+namespace = kirk
+
+country_event = {
+    id = kirk.1
+    title = kirk.1.t
+	desc = kirk.1.d
+    picture = LIBERUM_VETO_eventPicture
+    fire_only_once = yes
+
+    trigger = {
+        OR = {
+            TAG = WUR
+            TAG = SWA
+        }
+    }
+    mean_time_to_happen = {
+		months = 30
+	}
+    option = {
+        name = kirk.1.a
+        
+        add_prestige = 10
+
+        hidden_effect = {
+            country_event = {
+                id = kirk.2
+                days = 1
+            }
+        }
+    }
+}
+
+country_event = {
+    id = kirk.2
+    title = kirk.2.t
+    desc = kirk.2.d
+    picture = DEATH_OF_HEIR_eventPicture
+
+    is_triggered_only = yes
+
+    option = {
+        name = kirk.2.a
+        add_stability = -1
+        add_prestige = -10
+        kill_ruler = yes
+        add_manpower = -0.001
+    }
+}

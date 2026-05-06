@@ -1,0 +1,39 @@
+name = "Crusade of Varna"
+war_goal = {
+	type = superiority_crusade
+	casus_belli = cb_crusade
+}
+
+1443.1.1 = {
+	add_attacker = ENG
+	add_attacker = GEN
+	add_attacker = CAS
+	add_attacker = WUR
+	add_defender = GUY
+	add_defender = PRO
+	add_defender = BUR
+	add_defender = NRM
+	add_defender = BRI
+	add_defender = PIC
+}
+
+
+
+
+1444.11.10 = {
+	1444.11.11 = {
+	rem_attacker = ENG
+	rem_attacker = GEN
+	rem_attacker = CAS
+	rem_attacker = WUR
+	rem_defender = GUY
+	rem_defender = PRO
+	rem_defender = BUR
+	rem_defender = NRM
+	rem_defender = BRI
+	rem_defender = PIC
+	}
+}
+
+
+

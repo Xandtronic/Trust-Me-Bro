@@ -1,0 +1,83 @@
+country_decisions = {
+	gecko_court_recruitment_decision = {
+		color = { 166  0  0 }
+		potential = { ai = no }
+		allow = { hidden_trigger = { NOT = { has_country_flag = gecko_mercs_in_tier_selection_event_cflag } } }
+		effect = {
+			country_event = { id = gecko_court.1 }
+		}
+	}
+	echo_critical_events = {
+		color = { 166  0  0 }
+		potential = {
+			ai = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = echo_radical_reform_decision
+				NOT = { has_country_flag = radical_mercantilist_reforms }
+			}
+			custom_trigger_tooltip = {
+				tooltip = echo_military_reform_decision
+				NOT = { has_country_flag = military_reform }
+			}
+			custom_trigger_tooltip = {
+				tooltip = echo_commandant_decision
+				NOT = { has_country_modifier = echo_commandant_cooldown }
+				NOT = { has_country_modifier = echo_commandant_cooldown_100 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = echo_grand_captain_decision
+				NOT = { has_country_modifier = echo_grand_captain_cooldown }
+				NOT = { has_country_modifier = echo_grand_captain_cooldown_100 }
+			}
+		}
+		effect = {
+		}
+	}
+	urbanisation = {
+		color = { 166  0  0 }
+		potential = {
+			NOT = { has_country_flag = urbanisation_taken }
+			NOT = { has_country_flag = X_POR_economic_golden_age_cflag }
+		}
+		allow = {
+			adm_power = 100
+			dip_power = 100
+			mil_power = 100
+			splendor = 200
+			if = {
+				limit = { 
+					is_or_was_tag = {
+						tag = POR
+					}
+				}
+				hidden_trigger = {
+					NOT = { has_country_flag = X_POR_economic_golden_age_cflag }
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = urbanisation
+				duration = 18250
+			}
+			if = {
+				limit = { 
+					NOT = {
+						is_or_was_tag = {
+							tag = POR
+						}
+					}
+				}
+				set_country_flag = urbanisation_taken
+			}
+			else = {
+				set_country_flag = X_POR_economic_golden_age_cflag
+			}
+		}
+	}
+}

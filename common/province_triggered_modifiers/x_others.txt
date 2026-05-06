@@ -1,0 +1,7 @@
+kent_crossing = {
+		potential = {
+		}
+		trigger = {
+		}
+		local_defender_dice_roll_bonus = 1
+}

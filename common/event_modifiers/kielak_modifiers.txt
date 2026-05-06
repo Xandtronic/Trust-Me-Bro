@@ -1,0 +1,112 @@
+
+centralized_state_permanent_modifiers = {
+    	local_build_time = -0.10
+	regiment_recruit_speed = -0.10
+	local_friendly_movement_speed = 0.1
+	local_defensiveness = 0.1
+ 	
+}
+
+centralized_state_temporary_modifiers = {
+   	trade_goods_size_modifier = 0.10
+	local_development_cost = -0.05
+}
+
+
+trained_subject_officers = {
+    	discipline = 0.025
+    	land_morale = 0.1
+}
+
+trained_subject_officers2 = {
+    	discipline = 0.05
+    	land_morale = 0.1
+}
+
+docks_cost_no_slot ={
+	allowed_num_of_buildings = 1
+}
+
+market_places_cost_no_slot ={
+	allowed_num_of_buildings = 1
+}
+
+churches_cost_no_slot ={
+	allowed_num_of_buildings = 1
+}
+
+moghulistan_caucasus_fort_cost_no_slot = {
+	allowed_num_of_buildings = 1
+	defensiveness = 0.125
+}
+
+moghulistan_egypt= {
+	shock_damage = 0.125
+	discipline = 0.025
+	cavalry_flanking = 0.50
+}
+
+moghulistan_anatolia = {
+	available_province_loot = 0.50
+	loot_amount = 0.50
+	cavalry_shock = 0.25
+}
+
+sca_finland_cav = {
+	cavalry_power = 0.05
+	cav_to_inf_ratio = 0.05
+	cavalry_shock = 0.15
+	cavalry_cost = -0.1
+}
+
+african_cultures = {
+	num_accepted_cultures = 4
+	culture_conversion_cost = -0.1
+}
+
+lotharingian_conquest_of_germany = {
+	technology_cost = -0.025
+	infantry_power = 0.025
+	cavalry_power = 0.025
+	artillery_power = 0.025
+}
+
+emperor_dec_elector = {
+	imperial_authority_value = -0.1
+	diplomatic_reputation = -1
+	global_unrest = 2
+	reduced_liberty_desire = -10
+}
+
+no_exploit_extra_manpower = {
+	female_advisor_chance = 0.01
+}
+
+kielak_new_world_colony_trade_power = {
+	#province_trade_power_value = 2.5
+	regiment_recruit_speed = -0.05
+}
+
+kielak_anti_monopoly_exploit_mondifier = {
+	envoy_travel_time = -0.1
+}
+
+kielak_ottomans_janissary_parliament_modifier = {
+	discipline = 0.05
+	is_janissary_modifier = yes
+}
+
+kielak_roth_early_buff = {
+	garrison_size = 0.25
+	garrison_damage = 0.25
+}
+
+kielak_state_house = {
+	allowed_num_of_manufactories = 1
+}
+
+kielak_milan_tuscany_buff = {
+	shock_damage_received = -0.1
+	morale_damage_received = -0.1
+}
+

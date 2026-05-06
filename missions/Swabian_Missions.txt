@@ -1,0 +1,1420 @@
+
+swabian_group_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = WUR
+			tag = SWA
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	swa_expand_a_bit = {
+		icon = mission_assemble_an_army
+		required_missions = { }
+
+		provinces_to_highlight = {
+			owner = {
+				primary_culture = swabian
+				total_development = root
+				NOT = { tag = root }
+			}
+		}
+		
+		trigger = {
+			num_of_cities = 5
+			army_size_percentage = 1
+			custom_trigger_tooltip = {
+				tooltip = no_swabians_with_more_dev_tooltip
+				NOT = {
+					any_country = {
+						primary_culture = swabian
+						total_development = root
+					}
+				}
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = swa_new_diplomatic_relevance_mod
+				duration = 7300
+			}
+			add_core = 75
+			add_core = 4765
+			add_core = 1880
+			vassalize = ALS
+			every_province = {
+				limit = {
+					region = south_german_region
+					culture = swabian
+				}
+				add_permanent_claim = root
+			}
+		}
+	}
+	
+	swa_swabian_league_mission = {
+		icon = mission_alliances
+		required_missions = { swa_expand_a_bit }
+
+		provinces_to_highlight = {
+			culture = swabian
+			region = south_german_region
+			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = {
+				owner = {
+					primary_culture = swabian
+					alliance_with = root
+				}
+			}
+		}
+		
+		trigger = {
+			is_year = 1450
+			calc_true_if = {
+				desc = swa_swabian_league_mission_trigger_tooltip
+				all_province = {
+					region = south_german_region
+					culture = swabian
+					OR = {
+						country_or_non_sovereign_subject_holds = root
+						owner = {
+							primary_culture = swabian
+							alliance_with = root
+						}
+					}
+				}
+				amount = 17
+			}
+		}
+		
+		effect = {
+		custom_tooltip = swa_swabian_league_mission_desc
+			if = { 
+				limit = { 
+					ULM = { alliance_with = ROOT } 
+				}
+				vassalize = ULM
+			}
+			if = { 
+				limit = { 
+					MEM = { alliance_with = ROOT } 
+				}
+				vassalize = MEM
+			}
+			if = { 
+				limit = { 
+					PAL = { alliance_with = ROOT } 
+				}
+				vassalize = PAL
+			}
+			add_country_modifier = {
+				name = swa_loyal_vassals
+				duration = 7300
+			}
+		}
+	}
+	
+	swa_swabian_liberty = {
+		icon = mission_noble_council
+		required_missions = { swa_swabian_league_mission }
+
+		provinces_to_highlight = {
+			OR = {
+				area = lower_swabia_area
+				area = upper_swabia_area
+				area = upper_rhineland_area 
+				area = alsace_area
+				area = palatinate_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			lower_swabia_area = {
+				country_or_non_sovereign_subject_holds = root
+			}
+			upper_swabia_area = {
+				country_or_non_sovereign_subject_holds = root
+			}
+			upper_rhineland_area = {
+				country_or_non_sovereign_subject_holds = root
+			}
+			alsace_area = {
+				country_or_non_sovereign_subject_holds = root
+			}
+			palatinate_area = {
+				country_or_non_sovereign_subject_holds = root
+			}
+		}		
+		
+		effect = {
+			lower_swabia_area = {
+				add_permanent_province_modifier = {
+					name = swa_united
+					duration = -1
+				}
+			}
+			upper_swabia_area = {
+				add_permanent_province_modifier = {
+					name = swa_united
+					duration = -1
+				}
+			}
+			upper_rhineland_area = {
+				add_permanent_province_modifier = {
+					name = swa_united
+					duration = -1
+				}
+			}
+			alsace_area = {
+				add_permanent_province_modifier = {
+					name = swa_united
+					duration = -1
+				}
+			}
+			palatinate_area = {
+				add_permanent_province_modifier = {
+					name = swa_united
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	swa_stem_duchy = {
+		icon = mission_unite_home_region
+		required_missions = { swa_swabian_liberty }
+
+		provinces_to_highlight = {
+			OR = {
+				area = upper_swabia_area
+				area = lower_swabia_area
+				area = upper_rhineland_area
+				area = alsace_area
+				AND = {
+					OR = {
+						area = switzerland_area
+						area = romandie_area
+						province_id = 4710
+					}
+					NOT = {
+						ROOT = {
+							num_of_owned_provinces_with = {
+								value = 8 #of 11
+								OR = {
+									area = switzerland_area
+									area = romandie_area
+									province_id = 4710
+								}
+							}
+						}
+					}
+				}
+			}
+			NOT = { owned_by = root }
+		}
+		
+		trigger = {
+			upper_swabia_area = {
+				type = all
+				owned_by = root
+			}
+			lower_swabia_area = {
+				type = all
+				owned_by = root
+			}
+			upper_rhineland_area = {
+				type = all
+				owned_by = root
+			}
+			alsace_area = {
+				type = all
+				owned_by = root
+			}
+			num_of_owned_provinces_with = {
+				value = 8 #of 11
+				OR = {
+					area = switzerland_area
+					area = romandie_area
+					province_id = 4710
+				}
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = swa_restored_stem_duchy
+				duration = 7300
+			}
+			tirol_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+		}
+	}
+}
+
+swabian_group_2 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = SWA
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	swa_austria_shall_fall = {
+		icon = mission_impaled_soldies
+		position = 5
+		required_missions = { swa_stem_duchy }
+
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					area = tirol_area
+					OR = {
+						owned_by = HAB
+						is_core = HAB
+					}
+					NOT = { country_or_non_sovereign_subject_holds = root }
+				}
+				AND = {
+					is_capital = yes
+					owner = { is_emperor = yes }
+					NOT = { owned_by = root }
+				}
+			}
+		}
+		
+		trigger = {
+			OR = {
+				is_emperor = yes
+				AND = {
+					NOT = { is_part_of_hre = yes }
+					HAB = { is_emperor = no }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = HAB_owns_nothing_in_tirol
+				tirol_area = {
+					type = all
+					NOT = { owned_by = HAB }
+				}
+			}
+			total_own_and_non_tributary_subject_development = HAB
+			army_size = HAB
+		}
+		
+		effect = {
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 25
+			}
+			inner_austria_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			austria_proper_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			#Northern Lombardy
+			lombardy_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			po_valley_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			venetia_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}	
+		}
+	}
+	
+	swa_foothold_in_italy = {
+		icon = mission_italian_condottiere
+		required_missions = { swa_austria_shall_fall }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = lombardy_area
+				area = po_valley_area
+				area = venetia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = {
+				ROOT = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 6
+						OR = {
+							area = lombardy_area
+							area = po_valley_area
+							area = venetia_area
+						}
+					}
+				}
+			}
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 6
+				OR = {
+					area = lombardy_area
+					area = po_valley_area
+					area = venetia_area
+				}
+			}
+		}
+		
+		effect = {
+			piedmont_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			liguria_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			emilia_romagna_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+		}
+	}
+	
+	swa_lombard_league = {
+		icon = mission_conquer_50_development
+		required_missions = { swa_foothold_in_italy }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = lombardy_area
+				area = venetia_area
+				area = po_valley_area
+				area = piedmont_area
+				area = liguria_area
+				area = emilia_romagna_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = {
+				ROOT = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 18 #(out of 24)
+						OR = {
+							area = lombardy_area
+							area = venetia_area
+							area = po_valley_area
+							area = piedmont_area
+							area = liguria_area
+							area = emilia_romagna_area
+						}
+					}
+				}
+			}
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 18 #(out of 24)
+				OR = {
+					area = lombardy_area
+					area = venetia_area
+					area = po_valley_area
+					area = piedmont_area
+					area = liguria_area
+					area = emilia_romagna_area
+				}
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = swa_lombard_league_mod
+				duration = 7300
+			}
+			western_sicily_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			sicily_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			calabria_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			apulia_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			naples_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+		}
+	}
+	
+	swa_kingdom_of_sicily = {
+		icon = mission_monarch_in_throne_room
+		required_missions = { swa_lombard_league }
+
+		provinces_to_highlight = {
+			OR = {
+				area = naples_area
+				area = calabria_area
+				area = apulia_area
+				AND = {
+					OR = {
+						area = sicily_area
+						area = western_sicily_area
+					}
+					ROOT = {
+						NOT = {
+							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+								value = 5
+								OR = {
+									area = sicily_area
+									area = western_sicily_area
+								}
+							}
+						}
+					}
+				}
+			}
+			NOT = { country_or_non_sovereign_subject_holds = root }
+		}
+		
+		trigger = {
+			naples_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			calabria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			apulia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					area = sicily_area
+					area = western_sicily_area
+				}
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+					OR = {
+						is_part_of_hre = no
+						is_elector = yes
+					}
+				}
+				set_government_rank = 2
+			}
+			south_german_region = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			italy_region = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+		}
+	}
+	
+	swa_supremacy = {
+		icon = mission_empire
+		required_missions = { swa_kingdom_of_sicily }
+
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 118
+					OR = {
+						NOT = { owned_by = root }
+						NOT = { is_core = root }
+					}
+				}
+				AND = {
+					is_capital = yes
+					OR = {
+						owner = { is_emperor = yes }
+						owner = {
+							NOT = {
+								has_opinion = {
+									who = root
+									value = 0
+								}
+							}
+							NOT = {
+								ROOT = {
+									has_won_war_against = {
+										who = prev
+										max_years_since = 50
+									}
+								}
+							}
+							num_of_owned_provinces_with = {
+								value = 5
+								OR = {
+									region = north_german_region
+									region = south_german_region
+									region = italy_region
+								}
+							}
+						}
+					}
+					NOT = { owned_by = root }
+				}
+			}
+		}
+		
+		trigger = {
+			OR = {
+				is_emperor = yes
+				custom_trigger_tooltip = {
+					tooltip = swa_supremacy_trigger_tooltip2
+					NOT = { hre_size = 1 }
+					NOT = { exists = HLR }
+				}
+			}
+			owns_core_province = 118
+			total_development = 1000
+			custom_trigger_tooltip = {
+				tooltip = swa_supremacy_trigger_tooltip
+				NOT = {
+					any_country = {
+						NOT = {
+							has_opinion = {
+								who = root
+								value = 0
+							}
+						}
+						NOT = {
+							ROOT = {
+								has_won_war_against = {
+									who = prev
+									max_years_since = 50
+								}
+							}
+						}
+						num_of_owned_provinces_with = {
+							value = 5
+							OR = {
+								region = north_german_region
+								region = south_german_region
+								region = italy_region
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = swa_supremacy_mod
+				duration = -1
+			}
+		}
+	}
+}
+
+swabian_group_3 = { #crusader group
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = SWA
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	swa_war_on_infidel = {
+		icon = mission_hands_praying
+		position = 6
+		required_missions = { swa_austria_shall_fall }
+		
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				religion_group = muslim
+				total_development = 300
+			}
+		}
+
+		trigger = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = swa_war_on_infidel_trigger_tooltip2
+					any_country = {
+						religion_group = muslim
+						total_development = 300
+						is_in_war = {
+							attacker_leader = root
+							defender_leader = this
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = swa_war_on_infidel_trigger_tooltip
+					NOT = {
+						any_country = {
+							religion_group = muslim
+							total_development = 300
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			custom_tooltip = swa_war_on_infidel_effect_tooltip
+			hidden_effect = {
+				balkan_region = {
+					limit = {
+						owner = {
+							NOT = { religion_group = christian }
+						}
+					}
+					add_claim = root
+				}
+			}
+		}
+	}
+	
+	
+	
+	swa_balkans_freed = {
+		icon = mission_crusade_for_varna
+		position = 6
+		required_missions = { swa_war_on_infidel }
+
+		provinces_to_highlight = {
+			region = balkan_region
+			owner = { NOT = { religion_group = christian } }
+		}
+		
+		trigger = {
+			balkan_region = {
+				type = all
+				owner = {
+					religion_group = christian
+				}
+			}
+			calc_true_if = {
+				desc = swa_balkans_freed_trigger_tooltip
+				amount = 10
+				balkan_region = {
+					type = all
+					OR = {
+						owned_by = root
+						owner = { is_subject_of = root }
+						owner = { alliance_with = root }
+					}
+				}
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					religion = catholic
+					exists = PAP
+				}
+				add_papal_influence = 25
+			}
+			aleppo_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			syria_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			palestine_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+		}
+	}
+	
+	swa_crusader = {
+		icon = mission_teutonic_knights
+		required_missions = { swa_balkans_freed }
+		
+		trigger = {
+			owns_core_province = 379 #Jerusalem
+			379 = { religion = root }
+			aleppo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			syria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			palestine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+		}
+		
+		effect = {
+			add_prestige = 50
+			if = {
+				limit = {
+					religion_group = christian
+				}
+				add_country_modifier = {
+					name = swa_crusader_lord
+					duration = -1
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = swa_heathen_crusader_lord
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+emp_swa_prestige_branch = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
+	potential = {
+		has_dlc = "Emperor"
+		OR = {
+			tag = SWA
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	emp_bav_cultural_center = {
+		icon = develop_our_capital
+		required_missions = { }
+		position = 1
+		provinces_to_highlight = {
+			owned_by = root
+			is_capital = yes
+			OR = {
+				NOT = { development = 25 }
+				NOT = { num_of_buildings_in_province = 5 }
+			}
+		}
+		trigger = {
+			capital_scope = {
+				development = 25
+				num_of_buildings_in_province = 5
+			}
+		}
+		effect = {
+			capital_scope = {
+				if = {
+					limit = {
+						province_has_center_of_trade_of_level = 1
+						NOT = { province_has_center_of_trade_of_level = 5 }
+					}
+					add_center_of_trade_level = 1
+				}
+				else_if = {
+					limit = {
+						NOT = { province_has_center_of_trade_of_level = 1 }
+					}
+					center_of_trade = 1
+				}
+				else = {
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+		}
+	}
+	emp_bav_splendour = {
+		icon = regal_splendour
+		required_missions = { emp_bav_cultural_center }
+		position = 2
+		trigger = {
+			if = {
+				limit = { has_dlc = "Common Sense" }
+				government_rank = 2
+			}
+			else = { total_development = 300 }
+			is_subject = no
+			if = {
+				prestige = 80
+			}
+			legitimacy_equivalent = 95
+		}
+		effect = {
+			add_prestige = 20
+
+			add_country_modifier = {
+				name = bav_splendorous_bavaria
+				duration = 7300
+			}
+
+			if = {
+				limit = {
+					NOT = { has_dlc = "Common Sense" }
+					NOT = { government_rank = 2 }
+					OR = {
+						is_elector = yes
+						is_part_of_hre = no
+					}
+				}
+				set_government_rank = 2
+			}
+		}
+	}
+	emp_bav_oktoberfest_mission = {
+		icon = establish_oktoberfest
+		required_missions = { emp_bav_splendour }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					owned_by = root
+					OR = {	
+						trade_goods = grain
+						trade_goods = livestock
+						trade_goods = wine
+					}
+					NOT = { has_building = farm_estate }
+				}
+				AND = {
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 5
+								OR = {	
+									trade_goods = grain
+									trade_goods = livestock
+									trade_goods = wine
+								}
+							}
+						}
+					}
+					OR = {	
+						trade_goods = grain
+						trade_goods = livestock
+						trade_goods = wine
+					}
+					OR = {
+						owner = { is_subject_of = ROOT }
+						any_neighbor_province = {
+							owned_by = ROOT
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5 #eligible Bavarian starting provs (of all three duchies)
+				has_building = farm_estate
+			}
+			trade_goods_produced_amount = {
+				trade_goods = grain
+				amount = 25
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_province_modifier = {
+					name = bav_established_oktoberfest
+					duration = -1
+				}
+				if = {
+					limit = {
+						NOT = { devastation = 1 }
+						NOT = { prosperity = 100 }
+						ROOT = { has_dlc = "Mandate of Heaven" }
+					}
+					add_prosperity = 50
+				}
+			}
+		}
+	}
+}
+
+emp_bav_mil_branch = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
+	potential = {
+		has_dlc = "Emperor"
+		OR = {
+			tag = SWA
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	emp_bav_standing_army = {
+		icon = establish_a_standing_army
+		position = 1
+		required_missions = { }
+		provinces_to_highlight = {
+			owned_by = root
+			has_forcelimit_building_trigger = no
+			has_manpower_building_trigger = no
+			ROOT = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						value = 6
+						OR = {
+							has_forcelimit_building_trigger = yes
+							has_manpower_building_trigger = yes
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 6
+				OR = {
+					has_forcelimit_building_trigger = yes
+					has_manpower_building_trigger = yes
+				}
+			}
+			manpower_percentage = 0.75
+			army_size_percentage = 1
+			NOT = { num_of_mercenaries = 1 }
+		}
+		effect = {
+			capital_scope = {
+				add_base_manpower = 2
+			}
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				add_country_modifier = {
+					name = swa_professional_army
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+
+emp_bav_missions_religious = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
+	potential = {
+		has_dlc = "Emperor"
+		OR = {
+			tag = SWA
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	emp_bav_be_good_at_religion = {
+		icon = show_piety
+		required_missions = { }
+		trigger = {
+			if = {
+				limit = {
+					religion = catholic
+					exists = PAP
+				}
+				papal_influence = 100
+				PAP = {
+					has_opinion = {
+						who = root
+						value = 150
+					}
+				}
+				num_of_cardinals = 1
+			}
+			else_if = {
+				limit = {
+					religion = catholic
+				}
+				papal_influence = 100
+				religious_unity = 1
+			}
+			else_if = {
+				limit = {
+					religion = protestant
+					has_dlc = "Common Sense"
+				}
+				num_of_aspects = 3
+				church_power = 100
+			}
+			else_if = {
+				limit = {
+					religion = reformed
+					has_dlc = "Wealth of Nations"
+				}
+				fervor = 100
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = emp_bav_be_good_at_religion_reformation_started_tooltip
+					had_global_flag = {
+						flag = reformation_started
+						days = 7300
+					}
+				}
+				religious_unity = 1
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = bav_piety_shown
+				duration = 7300
+			}
+		}
+	}
+	
+	emp_bav_center_of_counter_reformation = {
+		icon = spread_piety
+		required_missions = { emp_bav_be_good_at_religion }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				owner = {
+					is_neighbor_of = root
+					NOT = { religion = root }
+					religion_group = root
+				}
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = emp_bav_center_of_counter_reformation_tooltip2
+				had_global_flag = {
+					flag = reformation_started
+					days = 18250
+				}
+			}
+			any_owned_province = {
+				OR = {
+					area = upper_bavaria_area
+					area = lower_bavaria_area
+					area = east_bavaria_area
+				}
+				has_building = university
+			}
+			custom_trigger_tooltip = {
+				tooltip = emp_bav_center_of_counter_reformation_tooltip
+				NOT = {
+					any_neighbor_country = {
+						NOT = { religion = root }
+						religion_group = root
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = bav_piety_spread
+				duration = -1
+			}
+			every_neighbor_country = {
+				add_opinion = {
+					who = root
+					modifier = opinion_bav_center_of_religion
+				}
+			}
+		}
+	}
+}
+
+
+emp_bav_missions_illuminati = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
+	potential = {
+		has_dlc = "Emperor"
+		OR = {
+			tag = SWA
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	emp_bav_illuminati_mission = {
+		icon = deal_with_the_illuminati
+		position = 3
+		required_missions = { emp_bav_center_of_counter_reformation }
+
+		trigger = {
+			has_institution = enlightenment
+			if = {
+				limit = {
+					NOT = { has_estate = estate_church }
+					NOT = { has_estate = estate_nobles }
+					NOT = { has_estate = estate_burghers }
+					NOT = { has_reform = revolutionary_republic_reform }
+					NOT = { has_reform = junior_revolutionary_republic_reform }
+				}
+				crown_land_share = 100
+			}
+			else_if = {
+				limit = { NOT = { has_estate = estate_nobles } }
+				OR = {
+					AND = {
+						NOT = { absolutism = 50 }
+						estate_loyalty = {
+							estate = estate_church
+							loyalty = 60
+						}
+						NOT = {
+							estate_territory = {
+								estate = estate_burghers
+								territory = 5
+							}
+						}
+					}
+					AND = {
+						absolutism = 85
+						estate_loyalty = {
+							estate = estate_burghers
+							loyalty = 60
+						}
+					}
+					has_reform = revolutionary_republic_reform
+					has_reform = revolutionary_empire_reform
+				}
+			}
+			else = {
+				OR = {
+					AND = {
+						NOT = { absolutism = 50 }
+						estate_loyalty = {
+							estate = estate_church
+							loyalty = 60
+						}
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 60
+						}
+						NOT = {
+							estate_territory = {
+								estate = estate_burghers
+								territory = 5
+							}
+						}
+					}
+					AND = {
+						absolutism = 85
+						estate_loyalty = {
+							estate = estate_burghers
+							loyalty = 60
+						}
+					}
+					has_reform = revolutionary_republic_reform
+					has_reform = revolutionary_empire_reform
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_nobles
+						has_estate = estate_burghers
+					}
+					NOT = {
+						OR = {
+							AND = {
+								NOT = { absolutism = 50 }
+								estate_loyalty = {
+									estate = estate_church
+									loyalty = 60
+								}
+								estate_loyalty = {
+									estate = estate_nobles
+									loyalty = 60
+								}
+								NOT = {
+									estate_territory = {
+										estate = estate_burghers
+										territory = 5
+									}
+								}
+							}
+							AND = {
+								absolutism = 85
+								estate_loyalty = {
+									estate = estate_burghers
+									loyalty = 60
+								}
+							}
+							has_reform = revolutionary_republic_reform
+							has_reform = revolutionary_empire_reform
+						}
+					}
+				}
+				custom_tooltip = emp_bav_illuminati_mission_effect_tooltip
+			}
+			if = {
+				limit = {
+					NOT = { has_estate = estate_church }
+					NOT = { has_estate = estate_nobles }
+					NOT = { has_estate = estate_burghers }
+				}
+				add_country_modifier = {
+					name = bav_bavarian_absolutism
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					NOT = { absolutism = 50 }
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 60
+					}
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 60
+					}
+					NOT = {
+						estate_territory = {
+							estate = estate_burghers
+							territory = 5
+						}
+					}
+				}
+				add_estate_loyalty_modifier = {
+					estate = estate_nobles
+					desc = VAL_BAV_DEALT_WITH_ILLUMINATI
+					loyalty = 10
+					duration = -1
+				}
+				add_estate_loyalty_modifier = {
+					estate = estate_church
+					desc = VAL_BAV_DEALT_WITH_ILLUMINATI
+					loyalty = 10
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					absolutism = 85
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 60
+					}
+				}
+				add_country_modifier = {
+					name = bav_bavarian_absolutism
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_reform = revolutionary_republic_reform
+						has_reform = revolutionary_empire_reform
+					}
+				}
+				add_country_modifier = {
+					name = bav_revolutionary_zeal
+					duration = -1
+				}
+			}
+		}
+	}
+}
