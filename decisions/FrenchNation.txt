@@ -150,6 +150,7 @@ country_decisions = {
 		effect = {
 			change_tag = XGB
 			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -230,6 +231,7 @@ country_decisions = {
 		effect = {
 			change_tag = LOT
 			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
