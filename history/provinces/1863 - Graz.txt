@@ -1,9 +1,9 @@
 #1863 - Graz
 
-owner = STY
-controller = STY
-add_core = STY
-add_core = STY
+owner = HAB
+controller = HAB
+add_core = HAB
+add_core = HAB
 culture = austrian
 religion = catholic
 base_tax = 5 
@@ -25,13 +25,13 @@ discovered_by = ottoman
 
 
 1452.1.1 = {
-	owner = STY
-	controller = STY
+	owner = HAB
+	controller = HAB
 }
 1457.11.24 = {
 	owner = HAB
 	controller = HAB
-	remove_core = STY
+	remove_core = HAB
 }
 1515.4.1 = { unrest = 4 } # Bund - Farmer insurrections
 1515.10.1 = { unrest = 0 }

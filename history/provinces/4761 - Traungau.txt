@@ -3,7 +3,7 @@
 owner = HAB
 controller = HAB
 add_core = HAB
-add_core = STY
+add_core = HAB
 culture = austrian
 religion = catholic
 base_tax = 2

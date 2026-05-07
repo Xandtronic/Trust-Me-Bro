@@ -20,13 +20,13 @@ discovered_by = ottoman
 
 
 1452.1.1 = {
-	owner = STY
-	controller = STY
-	add_core = STY
+	owner = HAB
+	controller = HAB
+	add_core = HAB
 }
 1457.11.24 = {	
-	owner = STY
-	controller = STY
+	owner = HAB
+	controller = HAB
 	remove_core = HAB
 }
 1470.1.1 = {

@@ -18950,3 +18950,43 @@ NOG_ideas = {
 		governing_capacity_modifier = 0.2
 	}
 }
+XGB_ideas = {
+	start = {
+		global_colonial_growth = 20
+		colonist_placement_chance = 0.15
+	}
+
+	bonus = {
+		movement_speed = 0.15
+	}
+
+	trigger = {
+		tag = XGB
+	}
+	free = yes		#will be added at load.
+	
+	XGB_idea_1 = {
+		colony_development_boost = 1
+	}
+	XGB_idea_2  = {
+		global_missionary_strength = 0.02
+	}
+	XGB_idea_3 = {
+		discipline = 0.025
+		cavalry_power = 0.15
+	}
+	XGB_idea_4 = {
+		vassal_forcelimit_bonus = 0.25
+		reduced_liberty_desire_on_other_continent = 50
+	}
+	XGB_idea_5= {
+		build_cost = -0.1
+	}
+	XGB_idea_6  = {
+		cav_to_inf_ratio = 0.15
+		cavalry_cost = -0.05
+	}
+	XGB_idea_7 = {
+		heavy_ship_power = 0.1
+	}
+}

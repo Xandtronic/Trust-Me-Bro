@@ -1,7 +1,7 @@
 # 1769 - G�rz
-owner = STY
-controller = STY
-add_core = STY
+owner = HAB
+controller = HAB
+add_core = HAB
 culture = slovene
 religion = catholic
 base_tax = 4
@@ -21,17 +21,17 @@ discovered_by = ottoman
 
 
 1420.1.1 = {
-	add_core = STY
+	add_core = HAB
 	capital = "G�rz"
 } # To the Habsburgs
 1452.1.1 = {
-	owner = STY
-	controller = STY
+	owner = HAB
+	controller = HAB
 }
 1457.11.24 = {	
 	owner = HAB
 	controller = HAB
-	remove_core = STY
+	remove_core = HAB
 }
 1525.5.1 = { unrest = 5 } # Farmer insurrections 
 1526.1.1 = { unrest = 0 }

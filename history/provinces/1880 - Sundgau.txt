@@ -22,14 +22,14 @@ discovered_by = ottoman
 
 
 1452.1.1 = {
-	owner = STY
-	controller = STY
-	add_core = STY
+	owner = HAB
+	controller = HAB
+	add_core = HAB
 }
 1457.11.24 = {
 	owner = HAB
 	controller = HAB
-	remove_core = STY
+	remove_core = HAB
 }
 1635.5.1 = { controller = FRA } # To France
 1636.8.15 = { controller = HAB } # Habsburg forces ravage North Eastern France, Lorraine liberated
