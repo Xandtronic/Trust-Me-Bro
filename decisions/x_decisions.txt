@@ -85,6 +85,11 @@ country_decisions = {
 			tihama_al_yemen_area = {destroy_province_permanently = yes }
 			basra_area = {destroy_province_permanently = yes }
 			iraq_arabi_area = {destroy_province_permanently = yes }
+			mecca_area = {destroy_province_permanently = yes }
+			hadramut_area = {destroy_province_permanently = yes }
+			qasim_area = {destroy_province_permanently = yes }
+			nafud_area = {destroy_province_permanently = yes }
+			medina_area = {destroy_province_permanently = yes }
 			set_global_flag = cleared_east
 		}
 	}
