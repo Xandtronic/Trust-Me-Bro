@@ -1309,17 +1309,6 @@ bul_fourth_group = {
 				name = bulgarian_bane_mongol
 				duration = -1
 			}
-			custom_tooltip = BUL_GLH_CLAIMS
-			hidden_effect = {
-			every_province = {
-				limit = { 
-						owned_by = GLH 
-						NOT = { is_permanent_claim = ROOT	}
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
 		}
 	}
 
