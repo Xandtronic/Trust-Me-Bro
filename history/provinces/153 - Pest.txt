@@ -6,7 +6,6 @@ culture = hungarian
 religion = catholic
 capital = "Buda"
 trade_goods = grain
-hre = yes
 base_tax = 5
 base_production = 4
 base_manpower = 2

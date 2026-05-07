@@ -1,7 +1,7 @@
 #76 - Salzburg
 
-owner = HAB
-controller = HAB
+owner = LBV
+controller = LBV
 culture = bavarian
 religion = catholic
 capital = "Salzburg"
@@ -11,7 +11,7 @@ base_tax = 5
 base_production = 5
 base_manpower = 4
 is_city = yes
-add_core = HAB
+add_core = LBV
 center_of_trade = 1
 
 
