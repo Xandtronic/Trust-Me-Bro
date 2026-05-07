@@ -7,7 +7,6 @@ religion = catholic
 technology_group = eastern
 capital = 153 # Buda
 historical_friend = HAB
-elector = yes
 
 change_estate_land_share = {
 	estate = estate_church
