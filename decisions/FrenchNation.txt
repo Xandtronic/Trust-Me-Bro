@@ -3,42 +3,7 @@ country_decisions = {
 	french_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
-			OR = {
-				was_never_end_game_tag_trigger = yes
-				tag = ORL
-			}
-			NOT = { has_country_flag = formed_france_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			OR = {
-				is_free_or_tributary_trigger = yes
-				ai = no
-			}
-			NOT = { tag = HLR }
-			NOT = { tag = FRA }
-			NOT = { tag = PAP }
-			NOT = { tag = SPA }		# Basque is a valid culture for both FRA and SPA
-			NOT = { tag = AVE }		# Anglois is also valid
-			OR = {
-				ai = no
-				NOT = { exists = FRA }
-			}
-			OR = {
-				culture_group = french
-				primary_culture = basque
-				primary_culture = breton
-			}
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
-			}
+			tag = ORL
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -67,6 +32,7 @@ country_decisions = {
 			}
 		}
 		allow = {
+			adm_tech = 8
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no			

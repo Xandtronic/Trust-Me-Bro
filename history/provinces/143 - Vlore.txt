@@ -1,18 +1,17 @@
-#143 - Vlorë - Southern Albania
+#143 - Vlorï¿½ - Southern Albania
 
-owner = TUR
-controller = TUR
-culture = albanian
+owner = BUL
+controller = BUL
+culture = bulgarian
 religion = orthodox
-capital = "Vlorë"
+capital = "Vlorï¿½"
 trade_goods = wool #or salt
 hre = no
 base_tax = 2
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = TUR
-add_core = ALB
+add_core = BUL
 discovered_by = KAZ
 discovered_by = CRI
 discovered_by = GOL

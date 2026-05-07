@@ -1,7 +1,7 @@
 #2300 - Bozok
 
-owner = TUR
-controller = TUR
+owner = CND
+controller = CND
 culture = turkish
 religion = sunni
 capital = "Yozgat"
@@ -11,8 +11,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-add_core = TUR
-add_core = ERE
+add_core = CND
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
