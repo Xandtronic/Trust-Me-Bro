@@ -8836,7 +8836,6 @@ BAL_ideas = {
 ORL_ideas = {
 	start = {
 		defensiveness = 0.2
-		ae_impact = -0.5
 		global_trade_power = 0.1
 	}
 
