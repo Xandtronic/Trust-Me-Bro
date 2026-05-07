@@ -1,0 +1,16 @@
+government = monarchy
+add_government_reform = bulgarian_tsardom_reform
+technology_group = eastern
+primary_culture = bulgarian
+religion = orthodox
+capital = 150	# Sofia
+1378.12.9 = { 
+	monarch = {
+		name = "Heugh"
+		dynasty = "Bulgers"
+		birth_date = 1368.2.14
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}

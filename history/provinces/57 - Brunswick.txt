@@ -1,8 +1,8 @@
 #57 - Brunswick
 
-owner = BRU
-controller = BRU
-culture = lower_saxon
+owner = HES
+controller = HES
+culture = hannoverian
 religion = catholic
 capital = "Braunschweig"
 trade_goods = iron
@@ -12,7 +12,7 @@ base_production = 3
 base_manpower = 3
 is_city = yes
 fort_15th = yes #Strong City Fortifications
-add_core = BRU
+add_core = HES
 
 
 

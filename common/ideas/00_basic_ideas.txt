@@ -21,7 +21,7 @@ innovativeness_ideas = {
 
 	patron_of_art = {
 		idea_cost = -0.10
-    	reform_progress_growth = 0.25
+    	reform_progress_growth = 0.35
 	}
 	empiricism = {
 		embracement_cost = -0.5
@@ -36,7 +36,7 @@ innovativeness_ideas = {
 		
 	}
 	print_culture = {
-		yearly_innovativeness = 0.5
+		yearly_innovativeness = 1
 		
 	}
 	optimism = {
@@ -200,7 +200,7 @@ expansion_ideas = {
 	}
 
 	additional_colonists = {
-		core_creation = -0.35
+		core_creation = -0.30
 		unjustified_demands = -0.4
 	}
 	additional_merchants = {
@@ -438,6 +438,7 @@ influence_ideas = {
     	no_claim_cost_increasement = yes
     	can_claim_states = yes
     	can_fabricate_for_vassals = yes
+		discipline = 0.01
 	}
 
 	ai_will_do = {
@@ -471,11 +472,11 @@ diplomatic_ideas = {
 	foreign_embassies = {
 		national_focus_years = -10
     	ae_impact = -0.3
-    	global_manpower_modifier = 0.10
+    	global_manpower_modifier = 0.075
 	}
 	cabinet = {
 		dip_advisor_cost = -0.25
-  		reform_progress_growth = 0.20
+  		reform_progress_growth = 0.15
 	}
 	benign_diplomats = {
 		possible_policy = 1
@@ -669,6 +670,7 @@ trade_ideas = {
 	}
 	trade_manipulation = {
 		build_cost = -0.05	
+		global_regiment_cost = -0.025
 	}
 	fast_negotiations = {
 		land_forcelimit_modifier = 0.075

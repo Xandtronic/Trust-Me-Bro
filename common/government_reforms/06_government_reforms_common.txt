@@ -5148,8 +5148,7 @@ seven_provinces_reform = {
 	}
 
 	modifiers = {
-		manpower_in_culture_group_provinces = 0.15
-		manpower_in_own_culture_provinces = 0.15
+		prestige = 1
 	}
 
 	custom_attributes = {
