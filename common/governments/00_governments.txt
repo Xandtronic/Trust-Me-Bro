@@ -141,6 +141,7 @@ monarchy = {
 			reforms = {
 				enforce_privileges_reform
 				quash_noble_power_reform
+				bulkavkhan
 				enforce_trader_privileges_reform
 				bengali_reform
 				sufi_syncretism_reform
@@ -225,6 +226,8 @@ monarchy = {
 				#1.37 Hungary
 				continue_the_renaissance_reform
 				timurid_diwan_reform
+				bulreform
+				bulliterary
 			}
 		}
 		state_and_religion = {
@@ -280,6 +283,8 @@ monarchy = {
 				mercenary_leadership_reform
 				#Visible but locked
 				amphibious_specialization_reform
+				bulsiege
+				bulcumans
 				royal_marines_reform
 				maritime_military_reform
 				professional_navy_reform
@@ -375,6 +380,7 @@ monarchy = {
 				meritocratic_focus_reform
 				dakhni_culture_reform
 				zabt_reform
+				bulboyar
 				dyanstic_administration_reform
 				permanent_marathas_council_reform
 				governmental_purbias_register_reform

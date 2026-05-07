@@ -1,0 +1,149 @@
+bul_moravia_restored = {
+	manpower_in_true_faith_provinces = 0.05
+	diplomatic_upkeep = 1
+}
+
+bul_ruthenia_restored = {
+	cavalry_power = 0.1
+	diplomatic_upkeep = 1
+}
+bul_empire2 = {
+	prestige = 1
+}
+bul_byzantine_reparations = {
+	global_tax_modifier = 0.1
+}
+
+bul_byzantine_treachery = {
+	land_morale = 0.05
+}
+bul_loyal_subject = {
+	liberty_desire = -50
+}
+bul_evolving_modifier = {
+	defensiveness = 0.1
+}
+bulgarian_fleet = {
+	galley_power = 0.1
+}
+
+bulgaria_industry = {
+	global_trade_goods_size_modifier = 0.15
+}
+bulgaria_triumph = {
+	global_autonomy = -0.05
+}
+
+bulgaria_rising = {
+	ae_impact = -0.1
+}
+
+bulgaria_sunion = {
+	global_unrest = -1
+	years_of_nationalism = -5
+	manpower_in_own_culture_provinces = 0.1
+}
+
+bulgaria_balkan_campaign = {
+	manpower_recovery_speed = 0.1
+}
+
+bulgaria_greek = {
+	num_accepted_cultures = 1
+}
+
+bulgaria_protect_aegean = {
+	naval_morale = 0.05
+	ship_power_propagation = 0.2
+}
+
+bulgaria_anatolian = {
+	land_morale = 0.1
+}
+
+bulgaria_jerusalem = {
+	global_missionary_strength = 0.01
+}
+
+bulgaria_alexandria = {
+	manpower_in_true_faith_provinces = 0.05
+}
+
+bulgaria_antioch = {
+	yearly_patriarch_authority = 0.005
+}
+
+bulgaria_danubian = {
+	global_own_trade_power = 0.15
+}
+
+bulgaria_carpathian = {
+	local_defensiveness = 0.15
+	local_hostile_attrition = 1
+}
+
+bulgaria_claim = {
+	province_warscore_cost = -0.1
+}
+
+bulgaria_cossacks = {
+	cavalry_shock = 1
+}
+
+bulgaria_rus = {
+	prestige_decay = -0.01
+}
+
+bulgaria_tsar = {
+	all_power_cost = -0.025
+}
+
+bulgaria_rome = {
+	tolerance_own = 3
+	land_morale = 0.1
+}
+
+bulgaria_convert = {
+	local_missionary_strength = 0.02
+}
+
+bulgarian_bane_mongol = {
+	discipline = 0.05
+}
+
+bulgaria_golden_age = {
+	global_tax_modifier = 0.2
+	monthly_splendor = 1
+}
+
+bulgaria_support_church = {
+	yearly_patriarch_authority = 0.001
+	institution_spread_from_true_faith = 0.1
+}
+
+bulgaria_literary = {
+	dip_advisor_cost = -0.15
+	advisor_pool = 1
+}
+
+bulgaria_tarnovo = {
+	local_tax_modifier = 0.15
+	local_development_cost = -0.15
+}
+
+bulgaria_fortress = {
+	local_hostile_attrition = 5
+}
+
+bulgaria_river = {
+	trade_steering = 0.15
+}
+
+bulgaria_termin = {
+	province_trade_power_value = 5
+}
+
+bulgaria_desire = {
+	local_development_cost = -0.1
+	allowed_num_of_buildings = 2
+}
