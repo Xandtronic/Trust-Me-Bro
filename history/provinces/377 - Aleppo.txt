@@ -2,8 +2,8 @@
 
 owner = KOJ
 controller = KOJ
-culture = al_suryah_arabic
-religion = sunni
+culture = cosmopolitan_french
+religion = catholic
 capital = "Halab"
 trade_goods = silk
 hre = no

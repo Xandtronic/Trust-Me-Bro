@@ -2243,7 +2243,7 @@ french_missions_2_Continuation_b = {
 	}
 	
 	fra_reform_legal_system = {
-		icon = rhineland_conquest
+		icon = XRHneland_conquest
 		required_missions = { fra_movement_centralization } 
 		position = 18
 		provinces_to_highlight = {

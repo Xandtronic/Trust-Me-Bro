@@ -2,7 +2,7 @@
 
 owner = KOJ
 controller = KOJ
-culture = al_suryah_arabic
+culture = cosmopolitan_french
 religion = shiite
 capital = "Trablos" #Tripoli in the East.
 trade_goods = grain

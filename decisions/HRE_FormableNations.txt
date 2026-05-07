@@ -33,18 +33,14 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			owns_core_province = 53	# Luneburg
-			owns_core_province = 1874	# Hannover
 			1758 = {					# Hannover
 				is_state = yes
 			}
 			num_of_owned_provinces_with = {
-				value = 8 #out of 13 i.e. you can leave out Holstein and stuff
+				value = 10
 				culture = lower_saxon
-				region = north_german_region
 				is_core = root
 			}
-			total_development = 100
 		}
 		effect = {
 			1758 = {
