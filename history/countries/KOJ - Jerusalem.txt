@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = holy_state_reform
+
+primary_culture = cosmopolitan_french
+religion = catholic
+technology_group = western
+capital = 379	# Jerusalem
+
+1443.1.1 = {
+	monarch = {
+		name = "Kariff"
+		culture = cosmopolitan_french
+		dynasty = "Hackerman"
+		adm = 3
+		dip = 4
+		mil = 5
+	}
+}
