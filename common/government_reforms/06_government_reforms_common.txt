@@ -5139,69 +5139,6 @@ integrated_ottoman_officials = {
 	}
 }
 
-seven_provinces_reform = {
-	icon = "seven_provinces_reform"
-	allow_normal_conversion = yes
-
-	potential = {
-		tag = NED
-	}
-
-	modifiers = {
-		prestige = 1
-	}
-
-	custom_attributes = {
-		seven_provinces_organization = yes
-	}
-
-	effect = {
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					region = low_countries_region
-					culture_group = ROOT
-				}
-				add_province_modifier = {
-					name = ned_seven_provinces_organization_positive_modifier
-					duration = -1
-				}
-			}
-			every_owned_province = {
-				limit = {
-					NOT = { region = low_countries_region }
-					continent = europe
-				}
-				add_province_modifier = {
-					name = ned_seven_provinces_organization_negative_modifier
-					duration = -1
-				}
-			}
-		}
-	}
-
-	removed_effect = {
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = ned_seven_provinces_organization_positive_modifier
-				}
-				remove_province_modifier = ned_seven_provinces_organization_positive_modifier
-			}
-			every_owned_province = {
-				limit = {
-					has_province_modifier = ned_seven_provinces_organization_negative_modifier
-				}
-				remove_province_modifier = ned_seven_provinces_organization_negative_modifier
-			}
-		}
-	}
-
-	ai = {
-		factor = 1
-	}
-}
-
 modern_economics_reform = {
 	icon = "modern_economics_reform"
 	allow_normal_conversion = yes

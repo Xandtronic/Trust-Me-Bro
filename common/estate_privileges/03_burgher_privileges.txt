@@ -4394,3 +4394,73 @@ estate_burghers_TIM_gulf_toll = {
 		factor = 1
 	}
 }
+
+estate_burghers_cultivate_the_drylands = {
+	icon = privilege_dev_cost_desert
+	land_share = 5
+	max_absolutism = -10
+	loyalty = 0.05
+	influence = 0.05
+	is_valid = {
+		OR = {
+			has_mission = koj_cultivate_the_holy_land
+			has_unlocked_estate_privilege = {
+				estate_privilege = estate_burghers_cultivate_the_drylands
+			}
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = has_unlocked_estate_burghers_cultivate_the_drylands_tt
+			has_unlocked_estate_privilege = {
+				estate_privilege = estate_burghers_cultivate_the_drylands
+			}	
+		}
+		any_owned_province = {
+			OR = {
+				region = mashriq_region
+				region = egypt_region
+			}
+			has_terrain = drylands
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_cultivate_the_drylands_gt
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				OR = {
+					region = mashriq_region
+					region = egypt_region
+				}
+				has_terrain = drylands
+			}
+			add_province_modifier = {
+				name = koj_cultivate_drylands
+				duration = -1
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_cultivate_the_drylands_rt
+	}
+	on_revoked_province = {
+		if = {
+			limit = { has_province_modifier = koj_cultivate_drylands }
+			remove_province_modifier = koj_cultivate_drylands
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_burghers_cultivate_the_drylands_rt
+	}
+	on_invalid_province = {
+		if = {
+			limit = { has_province_modifier = koj_cultivate_drylands }
+			remove_province_modifier = koj_cultivate_drylands
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

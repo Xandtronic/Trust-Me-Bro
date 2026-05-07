@@ -1,7 +1,7 @@
 #1854 - Negev
 
-owner = MAM
-controller = MAM
+owner = KOJ
+controller = KOJ
 culture = al_suryah_arabic
 religion = sunni
 capital = "Nablus"
@@ -11,7 +11,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 3
 is_city = yes
-add_core = MAM
+add_core = KOJ
 
 discovered_by = western
 discovered_by = muslim

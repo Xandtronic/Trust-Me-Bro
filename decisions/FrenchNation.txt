@@ -90,7 +90,7 @@ country_decisions = {
 }
 
 country_decisions = {
-	xbr_form = {
+	xgb_form = {
 		major = yes
 		potential = {
 			tag = BRI
@@ -170,7 +170,7 @@ country_decisions = {
 }
 
 country_decisions = {
-	xbr_form = {
+	lot_form = {
 		major = yes
 		potential = {
 			tag = BUR
