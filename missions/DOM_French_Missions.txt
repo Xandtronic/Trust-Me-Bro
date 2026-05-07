@@ -7,6 +7,8 @@ french_missions_1 = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination" 
@@ -399,6 +401,8 @@ french_missions_1_blank_hre = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = fra_shed_the_blood_of_the_saxon_man_flag }
@@ -433,6 +437,8 @@ french_missions_1_kill_hre_path = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_country_flag =  fra_fufujoni_flag
@@ -524,6 +530,8 @@ french_missions_1_hre_branch = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = fra_shed_the_blood_of_the_saxon_man_flag
@@ -606,6 +614,8 @@ french_missions_1_Continuation_a = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -1286,6 +1296,8 @@ french_rev_missions_1 = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -1469,6 +1481,8 @@ french_missions_2 = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -1542,6 +1556,8 @@ french_missions_2_blank_hre = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = fra_shed_the_blood_of_the_saxon_man_flag }
@@ -1592,6 +1608,8 @@ french_missions_2_charlemagne_path = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = fra_shed_the_blood_of_the_saxon_man_flag
@@ -1655,6 +1673,8 @@ french_missions_2_kill_hre_path = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = fra_shed_the_blood_of_the_saxon_man_flag }
@@ -1724,6 +1744,8 @@ french_missions_2_Continuation_b = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -2267,6 +2289,8 @@ french_rev_missions_2 = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -2466,6 +2490,8 @@ french_missions_3 = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -2581,6 +2607,8 @@ french_missions_3_blank_hre = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = fra_shed_the_blood_of_the_saxon_man_flag }
@@ -2615,6 +2643,8 @@ french_missions_3_charlemagne_path = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = fra_shed_the_blood_of_the_saxon_man_flag
@@ -2742,6 +2772,8 @@ french_missions_3_kill_hre_path = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = fra_shed_the_blood_of_the_saxon_man_flag }
@@ -2836,6 +2868,8 @@ french_missions_3_continuation_after_hre_missions = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -3232,6 +3266,8 @@ french_missions_3_normal_continued = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -3651,6 +3687,8 @@ french_rev_missions_3 = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -3793,6 +3831,8 @@ french_missions_4_normal = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -3862,6 +3902,8 @@ french_missions_4_branching = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = fra_chose_to_piss_off_pope_flag } 
@@ -3912,6 +3954,8 @@ french_missions_4_italian = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = fra_chose_to_piss_off_pope_flag
@@ -4067,6 +4111,8 @@ french_missions_4_crusader_kings = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = fra_papal_lap_dop_flag
@@ -4239,6 +4285,8 @@ french_missions_4_normal_continuation = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -4607,6 +4655,8 @@ french_missions_4_normal_contiuation = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -4950,6 +5000,8 @@ french_rev_missions_4 = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -5078,6 +5130,8 @@ french_missions_5_normal = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -5409,6 +5463,8 @@ french_missions_5_branching = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_country_flag = fra_chose_to_piss_off_pope_flag } 
@@ -5443,6 +5499,8 @@ french_missions_5_italian = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = fra_chose_to_piss_off_pope_flag
@@ -5483,6 +5541,8 @@ french_missions_5_crusader_kings = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_country_flag = fra_papal_lap_dop_flag
@@ -5593,6 +5653,8 @@ french_missions_5_continuation_normal_1 = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -5760,6 +5822,8 @@ fra_missions_5_continuation = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
@@ -6311,6 +6375,8 @@ french_rev_missions_5 = {
 		OR = {
 			tag = FRA
 			tag = XFR
+			tag = XBR
+			tag = LOT
 		}
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Domination"
