@@ -40,7 +40,7 @@ fixed_capital = 151 # Cannot move capital away from this province & no power cos
 
 1425.7.21 = {
 	monarch = {
-		name = "Ioannes VIII"
+		name = "Labrom"
 		dynasty = "Palaiologos"
 		birth_date = 1392.12.18
 		adm = 2
