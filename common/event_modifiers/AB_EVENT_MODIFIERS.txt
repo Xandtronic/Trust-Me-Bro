@@ -87,7 +87,7 @@ bulgaria_claim = {
 }
 
 bulgaria_cossacks = {
-	cavalry_shock = 1
+	cavalry_shock = 0.5
 }
 
 bulgaria_rus = {
