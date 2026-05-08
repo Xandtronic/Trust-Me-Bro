@@ -296,3 +296,7 @@ koj_kingdom_of_heaven = {
 	enforce_religion_cost = -0.5
 	global_missionary_strength = 0.03
 }
+
+naz_delta = {
+	trade_goods_size_modifier = 0.2
+}

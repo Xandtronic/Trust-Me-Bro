@@ -483,3 +483,7 @@
  KOJ_SELJUKS_NO: "\n£no£ If we complete this mission while we have humiliated the @SEL §YSeljuks§!, the duration of this modifier will be §Gdoubled§!."
  KOJ_LAT_GREECE: "We will establish the @LAT §YLatin Empire§! as a junior partner in the personal union in all owned §YGreek§! provinces."
  KOJ_SCALING: "§YTheologian§!, §YInquisitor§!, §YPapal Legate§! and §YMissionary§! advisors gains the following scaling modifier: §G+0.5§! Tolerance of the True Faith."
+ NAZ_PROSPERITY: "§YDelta§! and §YBahari§! areas will receive §G100§! prosperity."
+ NAZ_BREAD: "§YAl Gharbia§!, §YRashid§!, §YSharqiya§!, and §YDumyat§! provinces will receive:"
+ naz_delta_title: "Breadbasket of Nile"
+ naz_delta_desc: "The Nile Delta is home to grain fields that fed the entire Mediterranean and beyond at the Roman Empire's height. We are certain that with enough expansion of the existing irrigation systems, we will be able to recreate the fields that once earned the Nile Delta the title of Breadbasket."

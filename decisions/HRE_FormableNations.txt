@@ -13,8 +13,11 @@ country_decisions = {
 					ROOT = {
 						NOT = {
 							num_of_owned_provinces_with = {
-								value = 8 #out of 13 i.e. you can leave out Holstein or the FCs
-								culture = lower_saxon
+								value = 10
+								OR = {
+									culture = lower_saxon
+									culture = pommeranian
+								}
 								region = north_german_region
 								is_core = root
 							}

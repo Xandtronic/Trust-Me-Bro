@@ -6719,12 +6719,12 @@ LVA_ideas = {
 
 BUL_ideas = {
 	start = {	
-		merchants = 1
+		infantry_power = 0.1
 		core_creation = -0.1		
 	}
 	
 	bonus = {
-		infantry_power = 0.15
+		merchants = 1
 	}
 	
 	trigger = {
@@ -7454,11 +7454,11 @@ HAM_ideas = {
 jerusalem_ideas = {
 	start = {
 		global_missionary_strength = 0.02
-		land_morale = 0.15
+		land_morale = 0.1
 	}
 	
 	bonus = {
-		global_manpower_modifier = 0.25
+		global_manpower_modifier = 0.2
 	}
 	
 	trigger = {
@@ -7490,7 +7490,7 @@ jerusalem_ideas = {
 		leader_land_shock = 1
 	}
 	crusader_castles = {
-		defensiveness = 0.25
+		defensiveness = 0.2
 	}
 	cosmopolitan_nobility = {
 		diplomatic_reputation = 2
@@ -18992,7 +18992,7 @@ XGB_ideas = {
 XRH_ideas = {
 	start = {
 		global_trade_goods_size_modifier = 0.2
-		global_regiment_cost = -0.10
+		global_regiment_cost = -0.05
 	}
 
 	bonus = {
@@ -19021,9 +19021,9 @@ XRH_ideas = {
 		build_cost = -0.1
 	}
 	XRH_idea_6  = {
-		land_forcelimit_modifier = 0.25
+		land_forcelimit_modifier = 0.2
 	}
 	XRH_idea_7 = {
-		development_cost = -0.1
+		development_cost_in_primary_culture = -0.1
 	}
 }

@@ -142,11 +142,9 @@ koj_first_group = {
 		effect = {
 			set_country_flag = koj_advisor_scaling
 			custom_tooltip = KOJ_SCALING
-			custom_tooltip = AB_EMPTY
 			358 = {
 				upgrade_tax_building = yes
 			}
-			custom_tooltip = AB_EMPTY
 			add_country_modifier = {
 				name = koj_reclaiming_the_patriarchates
 				duration = 9125
@@ -306,7 +304,6 @@ koj_first_group = {
 				religion = ROOT
 				cost_multiplier = 0.5
 			}
-			custom_tooltip = AB_EMPTY
 			if = {
 				limit = {
 					358 = {
@@ -720,7 +717,6 @@ koj_third_group = {
 				religion = ROOT
 				cost_multiplier = 0.35
 			}
-			custom_tooltip = AB_EMPTY
 			syria_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -924,88 +920,6 @@ ab_koj_third_unlocked_second = {
 		}
 	}
 	has_country_shield = yes
-	
-	koj_outremer_nation = {
-	    icon = the_holy_league
-		required_missions = { koj_fate_nonbelievers }
-		position = 5
-		
-		provinces_to_highlight = {
-			owned_by = ROOT
-			OR = {
-				NOT = {
-					religion = ROOT
-				}
-				NOT = {
-					culture = ROOT
-				}
-				NOT = {
-					grown_by_development = 3
-				}
-			}
-		}
-		
-		trigger = {
-			num_of_owned_provinces_with = {
-				culture = ROOT
-				religion = ROOT
-				grown_by_development = 3
-				value = 10
-			}
-		}
-		
-		effect = {
-			if = {
-				limit = {
-					culture_group = french
-				}
-				change_primary_culture = Outremer
-				capital_scope = {
-					change_culture = Outremer
-				}
-			}
-			else_if = {
-				limit = {
-					culture_group = latin
-				}
-				change_primary_culture = Outremer_latin
-				capital_scope = {
-					change_culture = Outremer_latin
-				}
-			}
-			else_if = {
-				limit = {
-					culture_group = germanic
-				}
-				change_primary_culture = Outremer_germanic
-				capital_scope = {
-					change_culture = Outremer_germanic
-				}
-			}
-			else_if = {
-				limit = {
-					culture_group = iberian
-				}
-				change_primary_culture = Outremer_iberian
-				capital_scope = {
-					change_culture = Outremer_iberian
-				}
-			}
-			else_if = {
-				limit = {
-					culture_group = united_germanic
-				}
-				change_primary_culture = Outremer_united_germanic
-				capital_scope = {
-					change_culture = Outremer_united_germanic
-				}
-			}
-			custom_tooltip = KOJ_CULTURE_SPREAD
-			custom_tooltip = OTR_TRUE_FAITH
-		}
-	}
-	
-	
 }
 
 ab_koj_third_unlocked_second_tolerance = {
@@ -1150,7 +1064,6 @@ koj_third_like_seventh_or_wtf = {
 		
 		effect = {
 			country_event = { id = ab_jerusalem.5 }
-			custom_tooltip = AB_EMPTY
 			apulia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -1501,7 +1414,7 @@ koj_fourth_group = {
 		position = 5
 
 		trigger = {
-			tag = OTR
+			tag = KOJ
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 20
 				region = mashriq_region
@@ -1704,7 +1617,6 @@ koj_fifth_group = {
 		}
 		
 		effect = {
-			custom_tooltip = ZUN_FORTIFY
 			hidden_effect = {
 				every_owned_province = {
 					limit = {

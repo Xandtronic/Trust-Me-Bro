@@ -51,7 +51,7 @@ country_decisions = {
 			}
 			every_province = {
 				limit = {
-					culture = lower_saxon
+					culture = hannoverian
 				}
 				change_culture = hessian
 			}

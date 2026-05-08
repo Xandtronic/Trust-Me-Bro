@@ -701,8 +701,6 @@ NED_2 = {
 		effect = {
 			give_claims = { region = low_countries_region }
 			custom_tooltip = " "
-			custom_tooltip = NED_ALLOW_FASTER_NETHERLANDS_FORMATION
-			set_country_flag = ned_ignore_tech_requirement_netherlands
 			if = {
 				limit = {
 					tag = NED

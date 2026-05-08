@@ -8,10 +8,7 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
-        OR = {
-            TAG = WUR
-            TAG = SWA
-        }
+        tag = MNG
     }
     mean_time_to_happen = {
 		months = 30

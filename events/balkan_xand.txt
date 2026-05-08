@@ -1,0 +1,70 @@
+namespace = xand_help
+
+country_event = {
+    id = xand_help.1
+    title = xand_help.1.t
+    desc = xand_help.1.d
+    picture = COURT_eventPicture
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            tag = TUR
+            tag = BYZ
+            tag = BUL
+            tag = KOJ
+            tag = MAM
+            tag = ORL
+            tag = BUR
+            tag = BRI
+        }
+        ai = no
+        NOT = {
+            has_country_flag = xand_help_flag
+        }
+    }
+
+    option = {
+        name = xand_help.1.a
+        add_manpower = 5
+        add_treasury = 100
+        hidden_effect = {
+            set_country_flag = xand_help_flag
+        }
+    }
+}
+
+country_event = {
+    id = xand_help.2
+    title = xand_help.2.t
+    desc = xand_help.2.d
+    picture = COURT_eventPicture
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            tag = TUR
+            tag = BYZ
+            tag = BUL
+            tag = KOJ
+            tag = MAM
+            tag = ORL
+            tag = BUR
+            tag = BRI
+        }
+        ai = yes
+        NOT = {
+            has_country_flag = xand_help_flag
+        }
+    }
+
+    immediate = {
+        add_manpower = -5
+        add_treasury = -200
+        set_country_flag = xand_help_flag
+    }
+
+    option = {
+        name = xand_help.2.a
+    }
+}
