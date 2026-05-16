@@ -53,7 +53,6 @@ country_decisions = {
 		potential = {
 			ai = no
 			NOT = { has_global_flag = cleared_east	}
-			is_year = 1800
 		}
 		effect = {
 			east_indies_superregion = {destroy_province_permanently = yes }
