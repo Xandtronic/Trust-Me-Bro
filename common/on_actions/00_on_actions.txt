@@ -1072,8 +1072,6 @@ on_monarch_death = {
 		}
 		country_event = { id = 611 }
 	}
-	
-	burgundian_inheritance_start_effect = yes
 	ladislaus_postumus_king_died_effect = yes
 	joan_de_trastamara_king_died_effect = yes
 	events = {
@@ -2018,6 +2016,99 @@ on_monthly_pulse = {
 				name = geo_privilege_mountains
 				duration = -1
 			}
+		}
+	}
+	every_province = {
+		limit = {
+			has_province_modifier = docks_cost_no_slot
+			OR = {
+				owner = {
+					NOT = {
+						maritime_ideas = 6
+					}
+				}
+				NOT = {
+					has_dock_building_trigger = yes
+				}
+			}
+		}
+		remove_province_modifier = docks_cost_no_slot
+	}
+	every_province = {
+		limit = {
+			has_province_modifier = market_places_cost_no_slot
+			OR = {
+				owner = {
+					NOT = {
+						trade_ideas = 2
+					}
+				}
+				NOT = {
+					has_trade_building_trigger = yes
+				}
+			}
+		}
+		remove_province_modifier = market_places_cost_no_slot
+	}
+	every_province = {
+		limit = {
+			has_province_modifier = churches_cost_no_slot
+			OR = {
+				owner = {
+					NOT = {
+						economic_ideas = 1
+					}
+				}
+				NOT = {
+					has_tax_building_trigger = yes
+				}
+			}
+		}
+		remove_province_modifier = churches_cost_no_slot
+	}
+	every_province = {
+		limit = {
+			NOT = {
+				has_province_modifier = churches_cost_no_slot
+			}
+			has_tax_building_trigger = yes
+			owner = {
+				economic_ideas = 1
+			}
+		}
+		add_province_modifier = {
+			name = churches_cost_no_slot
+			duration = -1
+		}
+	}
+	every_province = {
+		limit = {
+			NOT = {
+				has_province_modifier = market_places_cost_no_slot
+			}
+			has_trade_building_trigger = yes
+			owner = {
+				trade_ideas = 2
+			}
+		}
+		add_province_modifier = {
+			name = market_places_cost_no_slot
+			duration = -1
+		}
+	}
+	every_province = {
+		limit = {
+			NOT = {
+				has_province_modifier = docks_cost_no_slot
+			}
+			has_dock_building_trigger = yes
+			owner = {
+				maritime_ideas = 6
+			}
+		}
+		add_province_modifier = {
+			name = docks_cost_no_slot
+			duration = -1
 		}
 	}
 }

@@ -42,25 +42,12 @@ fixed_capital = 151 # Cannot move capital away from this province & no power cos
 	monarch = {
 		name = "Labrom"
 		dynasty = "Palaiologos"
-		birth_date = 1392.12.18
-		adm = 2
-		dip = 2
-		mil = 2
+		birth_date = 1416.1.18
+		adm = 3
+		dip = 3
+		mil = 3
 	}
-}
-
-1425.7.21 = {
-	heir = {
-		name = "Konstantinos"
-		monarch_name = "Konstantinos XI"
-		dynasty = "Palaiologos"
-		birth_date = 1405.2.8
-		death_date = 1453.5.29
-		claim = 60 #he did not go on the throne without a pretender
-		adm = 5 #previous experience as despot of morea
-		dip = 2 #uneventful campaigns to garner western support
-		mil = 3 #Experience campaigning against the Ottomans in thessaly. Event will bump it up to 4.
-	}
+	add_ruler_personality = babbling_buffoon_personality
 }
 
 1448.10.31 = {

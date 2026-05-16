@@ -5070,7 +5070,7 @@ bur_english_diplomacy = {
 
 bur_king_of_franks = {
 	diplomatic_upkeep = 1
-	land_morale = 0.15
+	land_morale = 0.075
 }
 
 bur_influence_over_princes = {

@@ -31,6 +31,226 @@ country_event = {
         hidden_effect = {
             set_country_flag = xand_help_flag
         }
+        if = {
+            limit = {
+                tag = BYZ
+            }
+            add_casus_belli = {
+                target = TUR
+                type = cb_imperial
+                months = 12
+            }
+            TUR = {
+                set_country_flag = xand_imperial_target
+            }
+        }
+        if = {
+            limit = {
+                tag = BUL
+            }
+            add_casus_belli = {
+                target = TUR
+                type = cb_imperial
+                months = 12
+            }
+            TUR = {
+                set_country_flag = xand_imperial_target
+            }
+        }
+        if = {
+            limit = {
+                tag = TUR
+            }
+            add_casus_belli = {
+                target = BUL
+                type = cb_imperial
+                months = 12
+            }
+            BUL = {
+                set_country_flag = xand_imperial_target
+            }
+        }
+        if = {
+            limit = {
+                tag = ORL
+            }
+            add_casus_belli = {
+                target = BRI
+                type = cb_imperial
+                months = 12
+            }
+            BRI = {
+                set_country_flag = xand_imperial_target
+            }
+        }
+        if = {
+            limit = {
+                tag = BRI
+            }
+            add_casus_belli = {
+                target = ORL
+                type = cb_imperial
+                months = 12
+            }
+            ORL = {
+                set_country_flag = xand_imperial_target
+            }
+        }
+        if = {
+            limit = {
+                tag = BUR
+            }
+            add_casus_belli = {
+                target = BRI
+                type = cb_imperial
+                months = 12
+            }
+            define_heir = {
+                name = "Charles (He Came Back)"
+                monarch_name = "Charles (He Came Back)"
+                dynasty = "de Bourgogne"
+                birth_date = 1434.11.10
+                claim = 95
+                adm = 2
+                dip = 3
+                mil = 4
+            }
+            BRI = {
+                set_country_flag = xand_imperial_target
+            }
+        }
+        if = {
+            limit = {
+                tag = KOJ
+            }
+            add_casus_belli = {
+                target = MAM
+                type = cb_imperial
+                months = 12
+            }
+            MAM = {
+                set_country_flag = xand_imperial_target
+            }
+        }
+        if = {
+            limit = {
+                tag = MAM
+            }
+            add_casus_belli = {
+                target = KOJ
+                type = cb_imperial
+                months = 12
+            }
+            KOJ = {
+                set_country_flag = xand_imperial_target
+            }
+        }
+    }
+    option = {
+        trigger = {
+            OR = {
+                tag = ORL
+                tag = BUR
+                tag = BRI
+                tag = BYZ
+                tag = BUL
+                tag = TUR
+            }
+        }
+        name = xand_help.1.b
+        add_manpower = 5
+        add_treasury = 100
+        hidden_effect = {
+            set_country_flag = xand_help_flag
+        }
+        if = {
+            limit = {
+                tag = BYZ
+            }
+            add_casus_belli = {
+                target = BUL
+                type = cb_imperial
+                months = 12
+            }
+            BUL = {
+                set_country_flag = xand_imperial_target
+            }
+        }
+        if = {
+            limit = {
+                tag = BUL
+            }
+            add_casus_belli = {
+                target = BYZ
+                type = cb_imperial
+                months = 12
+            }
+            BYZ = {
+                set_country_flag = xand_imperial_target
+            }
+        }
+        if = {
+            limit = {
+                tag = TUR
+            }
+            add_casus_belli = {
+                target = BYZ
+                type = cb_imperial
+                months = 12
+            }
+            BYZ = {
+                set_country_flag = xand_imperial_target
+            }
+        }
+        if = {
+            limit = {
+                tag = ORL
+            }
+            add_casus_belli = {
+                target = BUR
+                type = cb_imperial
+                months = 12
+            }
+            BUR = {
+                set_country_flag = xand_imperial_target
+            }
+        }
+        if = {
+            limit = {
+                tag = BRI
+            }
+            add_casus_belli = {
+                target = BUR
+                type = cb_imperial
+                months = 12
+            }
+            BUR = {
+                set_country_flag = xand_imperial_target
+            }
+        }
+        if = {
+            limit = {
+                tag = BUR
+            }
+            add_casus_belli = {
+                target = ORL
+                type = cb_imperial
+                months = 12
+            }
+            define_heir = {
+                name = "Charles (He Came Back)"
+                monarch_name = "Charles (He Came Back)"
+                dynasty = "de Bourgogne"
+                birth_date = 1434.11.10
+                claim = 95
+                adm = 2
+                dip = 3
+                mil = 4
+            }
+            ORL = {
+                set_country_flag = xand_imperial_target
+            }
+        }
     }
 }
 
