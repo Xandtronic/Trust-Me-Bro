@@ -476,7 +476,7 @@ diplomatic_ideas = {
 	}
 	cabinet = {
 		dip_advisor_cost = -0.25
-  		reform_progress_growth = 0.15
+  		estate_interaction_cooldown_modifier = -0.25
 	}
 	benign_diplomats = {
 		possible_policy = 1

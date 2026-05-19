@@ -135,4 +135,80 @@ country_decisions = {
 			set_country_flag = desperate_defence_used
 		}
 	}
+	heir_pls = {
+		color = { 41  233  249 }
+		potential = {
+			ai = no
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = heir_cd
+			}
+		}
+		effect = {
+			define_heir = {
+				dynasty = ROOT
+				age = 0
+				adm = 3
+				dip = 3
+				mil = 3
+				claim = 100
+			}
+			add_country_modifier = {
+				name = heir_cd
+				duration = 7300
+			}
+		}
+	}
+	development_counter = {
+		color = { 166  0  0 }
+		potential = { ai = no }
+		allow = {
+			if = {
+				limit = {
+					has_country_flag = has_development_counter_cflag
+				}
+				custom_trigger_tooltip = {
+					tooltip = development_counter_tt
+				}
+			}
+			hidden_trigger = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = has_development_counter_cflag }
+					}
+					always = yes
+				}
+				else = {
+					always = no
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = has_development_counter_cflag }
+				}
+				custom_tooltip = development_counter_update_tt
+				hidden_effect = { development_counter = { on_startup = yes } }
+			}
+		}
+	}
+	splendor_into_power = {
+        color = { 166  0  0 }
+		potential = {
+			splendor = 600
+		}
+		allow = {	
+			splendor = 800
+		}
+		effect = {
+			add_splendor = -800
+			change_government_reform_progress = 50
+			#add_adm_power = 50
+			#add_dip_power = 50
+			#add_mil_power = 50
+		}
+		ai_will_do = {factor = 1}
+	}
 }

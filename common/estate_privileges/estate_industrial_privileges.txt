@@ -112,7 +112,7 @@ estate_industrial_establish_industrial_parks = {
 				}
 			}
 		}
-		modifier = { development_cost_modifier = -0.1 }
+		modifier = { development_cost_modifier = -0.05 }
 	}
 	
 	conditional_modifier = {
